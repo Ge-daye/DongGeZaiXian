@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 清除浮动样式，下次直接调用clearfix类就可以了 */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    background-color: #f3f5f7;
+    height: 3000px;
+}
+
+/* 清除li的圆点 */
+li {
+    list-style: none;
+}
+
+/* 清除a的下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 版心通用的参数 */
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+/*头部横行大盒子 */
+.header {
+    height: 42px;
+    /* background-color: pink; */
+    /* 这里会层叠w中的margin */
+    margin: 30px auto;
+}
+
+/*网站左上角logo*/
+.logo {
+    float: left;
+
+    width: 196px;
+    height: 42px;
+    /* background-color: skyblue; */
+    background-image: url(images/logo.png);
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 42px;
+    font-weight: 600;
+    color: rgb(36, 35, 35);
+
+}
+
+.nav ul li a:hover {
+    border-bottom: 3px solid rgb(45, 182, 236);
+    color: rgb(45, 182, 236);
+}
+
+.search {
+    float: left;
+    width: 300px;
+    height: 42px;
+
+    margin-left: 50px;
+}
+
+.search input {
+    float: left;
+    width: 248px;
+    height: 38px;
+    border: 2px solid rgb(103, 173, 214);
+    border-right: none;
+    font-size: 13px;
+    text-indent: 1.2em;
+    color: rgb(190, 190, 190);
+}
+
+.search button {
+    /* 因为input和button都是行内块元素
+     它们之间有默认的间隙 所以要浮动*/
+    float: left;
+    width: 50px;
+    height: 42px;
+    /* button默认的是有边框的，这里要清除边框 */
+    border: 0;
+    background-image: url(images/search.png);
+}
+
+.user {
+    /* 网站的用户一般在靠右，所以用右浮动 */
+    float: right;
+    /* 不指定宽度，让文字自动撑开盒子 */
+    height: 42px;
+    line-height: 42px;
+    margin-right: 30px;
+    /* background-color: rgb(255, 226, 181); */
+
+}
+
+.user img {
+    height: 36px;
+    widows: 36px;
+    border-radius: 18px;
+    /* margin-top: 3px; */
+    background-color: rgb(144, 241, 233);
+}
+
+/* banner区域 */
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+.banner .w {
+    height: 421px;
+
+    background: url(images/banner.png) no-repeat top center;
+}
+
+.subnav {
+    float: left;
+    width: 190px;
+    height: 413px;
+    background-color: rgba(0, 0, 0, 0.288);
+    padding-top: 7px;
+}
+
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+
+}
+
+.subnav ul li a {
+    display: block;
+    height: 45px;
+    font-size: 14px;
+    color: #fff;
+
+}
+
+.subnav ul li a:hover {
+    background-color: rgba(168, 168, 168, 0.233);
+}
+
+.subnav ul li a span {
+    float: right;
+}
+
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 50px;
+
+}
+
+.course h2 {
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    font-size: 18px;
+    line-height: 48px;
+    color: #fff;
+}
+
+.bd {
+    padding: 0 20px;
+
+}
+
+.bd ul li {
+    padding: 10px 0;
+    border-bottom: 2px solid #efefef;
+}
+
+.bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.bd ul li p {
+    font-size: 14px;
+    color: #a5a5a5;
+}
+
+.course a {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #36b1ff;
+    font-weight: 600;
+    line-height: 38px;
+    text-align: center;
+}
+
+/*推荐栏模块 */
+.goods {
+    height: 60px;
+    margin-top: 8px;
+    box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.2);
+    line-height: 60px;
+}
+
+.goods ul li {
+    float: left;
+}
+
+.goods ul li a {
+    padding: 0 30px;
+    color: #000;
+    border-left: 2px solid #bfbfbf;
+
+}
+
+.goods h3 {
+    float: left;
+    width: 132px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #6bbfff;
+
+
+}
+
+.mod {
+    float: right;
+    line-height: 60px;
+    margin-right: 3px;
+    text-decoration: underline;
+}
+
+/* box核心区域 */
+.box {
+    margin-top: 30px;
+}
+
+.box-hd {
+    height: 43px;
+    line-height: 43px;
+
+}
+
+.box-hd h3 {
+    float: left;
+    font-weight: 550;
+    color: #9b9c9d;
+}
+
+.box-hd a {
+    float: right;
+    color: rgb(172, 168, 168);
+    font-size: 13px;
+    margin-right: 20px;
+
+}
+
+/* 因为这里以后还可能有更多的展示，所以暂时先不给高度 */
+/* .box .box-bd {
+    height: 560px;
+}  */
+.box-bd ul {
+    width: 1220px;
+}
+
+.box-bd ul li {
+    float: left;
+    height: 271px;
+    width: 229px;
+    margin-right: 14px;
+    margin-bottom: 15px;
+}
+
+.box-bd ul li img {
+    width: 100%;
+}
+
+.footer {
+    /* background-color: pink; */
+    height: 415px;
+}
+
+.footer .w {
+    padding-top: 30px;
+}
+.copyright {
+    float: left;
+}
+.copyright p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 8px;
+}
+.copyright a{
+    display: block;
+    height: 38px;
+    width: 120px;
+    border:2px solid #02a3fe;
+    margin-top:10px;
+    margin-left: 15px;
+    color:#02a3fe;
+    font-size:16px;
+    line-height:38px;
+    text-align: center;
+}
+.links {
+    float:right;
+}
+.links dl {
+    float: right;;
+    margin-right: 66px;
+}
+.links dl dt {
+    margin-bottom: 5px;
+    font-size:18px;
+    color: #333;
+    font-weight: 550;
+}
+.links dl dd {
+    margin-bottom: 5px;
+}
+.links dl dd a:hover {
+    background-color: rgb(216, 214, 214);
+}
